@@ -38,7 +38,6 @@ RSpec.describe 'the projects show page', type: :feature do
         ContestantProject.create!(contestant_id: erin.id, project_id: boardfit.id) 
         
         visit "/projects/#{news_chic.id}"
-
         expect(page).to have_content("Number of Contestants:")
         expect(page).to have_content(3)
 
