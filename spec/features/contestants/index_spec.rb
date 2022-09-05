@@ -61,7 +61,6 @@ RSpec.describe 'the contestants index page', type: :feature do
 
         expect(page).to have_content("Projects:")
 
-
         within("#contestant_#{jay.id}") do
           expect(page).to have_content("News Chic")
         end

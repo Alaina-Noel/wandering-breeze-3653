@@ -57,8 +57,8 @@ RSpec.describe Contestant, type: :model do
       ContestantProject.create(contestant_id: gretchen.id, project_id: news_chic.id)
       ContestantProject.create(contestant_id: gretchen.id, project_id: upholstery_tux.id)
 
-      expect(jay.find_all_projects).to eq([news_chic])
-      expect(gretchen.find_all_projects).to eq([news_chic, upholstery_tux])
+      expect(jay.find_all_projects).to eq([news_chic.name])
+      expect(gretchen.find_all_projects).to eq([news_chic.name, upholstery_tux.name])
     end
   end
 

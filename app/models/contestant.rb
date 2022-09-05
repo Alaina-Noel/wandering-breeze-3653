@@ -8,7 +8,9 @@ class Contestant < ApplicationRecord
   end
 
   def find_all_projects
-    self.projects
+    self.projects.map do |project|
+      project.name
+    end
   end
   
 end
