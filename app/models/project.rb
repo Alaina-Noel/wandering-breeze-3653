@@ -7,4 +7,9 @@ class Project < ApplicationRecord
   def find_theme
     Challenge.where(id: challenge_id).first.theme
   end
+
+  def count_contestants
+    contestants.size
+  end
+
 end
