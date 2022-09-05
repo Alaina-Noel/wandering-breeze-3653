@@ -1,10 +1,8 @@
 <h1>All Contestants</h1>
 
 <p><% @contestants.each do |contestant| %></p>
-  <div id="contestant_<%={contestant.id}%>">
+  <div id= "contestant_<%=contestant.id %>" >
     <p><%= contestant.name %></p>
-    <p><%= @contestant_projects.each do |project| %></p>
-      <p>Projects:<%= project.name %></p>
-    <p><% end %></p>
+    <p>Projects:<%= contestant.find_all_projects %></p>
   </div>
 <p><% end %></p>
