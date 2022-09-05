@@ -8,7 +8,7 @@ class Contestant < ApplicationRecord
   end
 
   def find_all_projects
-    require 'pry' ; binding.pry
+    self.projects
   end
   
 end
