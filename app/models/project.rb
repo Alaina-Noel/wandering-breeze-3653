@@ -5,5 +5,6 @@ class Project < ApplicationRecord
   has_many :contestants, through: :contestant_projects
 
   def find_theme
+    Challenge.where(id: challenge_id).first.theme
   end
 end

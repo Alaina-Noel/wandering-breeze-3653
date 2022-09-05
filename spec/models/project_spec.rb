@@ -22,7 +22,7 @@ RSpec.describe Project, type: :model do
       upholstery_tux = furniture_challenge.projects.create(name: "Upholstery Tuxedo", material: "Couch")
 
       expect(news_chic.find_theme).to eq("Recycled Material")
-      expect(furniture_challenge.find_theme).to eq("Apartment Furnishings")
+      expect(upholstery_tux.find_theme).to eq("Apartment Furnishings")
     end
   end
 end
